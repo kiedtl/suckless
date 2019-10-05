@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
-type tcc >/dev/null && CC=tcc
-export CC=${CC:-gcc}
+#type tcc >/dev/null && CC=tcc
+#export CC=${CC:-gcc}
 export CFLAGS='-O3 -pipe -s -pedantic -std=c99 \
 -fstack-protector-strong -fstack-clash-protection -fexceptions'
 export LDFLAGS=-s

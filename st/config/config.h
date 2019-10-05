@@ -6,44 +6,18 @@
 /* char font[] = "IBMPlexMono:pixelsize=16:antialias=true:autohint=true"; */
 /* char font[] = "GohuFont:pixelsize=14:antialias=false:autohint=false"; */
 /* char font[] = "cherry:pixelsize=12:antialias=false:autohint=false"; */
-char font[] = "Roboto Mono:pixelsize=14:antialias=true:autohint=true";
+char font[] = "Iosevka:pixelsize=14:antialias=true:autohint=true";
 /* char font[] = "MonteCarlo:pixelsize=10:antialias=false:autohint=false"; */
 /* ------------------------------------------------------- */
 
-float alpha = 0.9; /* bg opacity */
-int borderpx = 22; /* Internal border / padding */
+float alpha = 1.0; /* bg opacity */
+int borderpx = 24; /* Internal border / padding */
 static unsigned int cols = 80; /* Default columns */
 static unsigned int rows = 30; /* Default rows */
 unsigned int tabspaces = 4;
 
-/* --------------- Themes -------------------------------- */
-/* #include "/home/mitch/.cache/wal/colors-wal-st.h" // pywal */
-/* -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* */
-// best
-#include "../themes/mine/plan9.h"
-/* #include "../themes/terminaldotsexy/grayscale-theme.h" */
-/* #include "../themes/mine/bubblegum-theme.h" */
-/* -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* */
-/* #include "../themes/terminaldotsexy/praiso-dark-theme.h" */
-/* #include "../themes/terminaldotsexy/estuary-light-theme.h" */
-/* #include "../themes/terminaldotsexy/gruvbox-light-hard-theme.h" */
-/* #include "../themes/terminaldotsexy/plateau-light-theme.h" */
-/* #include "../themes/terminaldotsexy/ashes-dark-theme.h" */
-/* #include "../themes/terminaldotsexy/mocha-light-theme.h" */
-/* #include "../themes/terminaldotsexy/ashes-light-theme.h" */
-/* #include "../themes/terminaldotsexy/unsifted-wheat-theme.h" */
-/* #include "../themes/terminaldotsexy/insignificato-theme.h" */
-/* #include "../themes/terminaldotsexy/mostly-bright-theme.h" */
-/* #include "../themes/terminaldotsexy/dawn-theme.h" */
-/* #include "../themes/terminaldotsexy/nature-suede-theme.h" */
-/* #include "../themes/terminaldotsexy/mocha-dark-theme.h" */
-/* #include "../themes/terminaldotsexy/navy-and-ivory-theme.h" */
-/* #include "../themes/terminaldotsexy/visibone-theme.h" */
-/* #include "../themes/terminaldotsexy/ocean-dark-theme.h" */
-/* #include "../themes/terminaldotsexy/tomorrow-dark-theme.h" */
-/* #include "../themes/terminaldotsexy/default-color-scheme.h" */
-/*  -------------------------------------------------------  */
-
+#include "/home/kiedtl/.cache/wal/colors-wal-st.h"
+/* #include "../themes/mine/plan9.h" */
 
 MouseShortcut mshortcuts[] = {
     /* button               mask            string */
@@ -72,7 +46,6 @@ Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Page_Down,   kscrolldown,    {.i = 3} },
 };
 
-// # # ## # # # # ## IGNORE BELOW ## # # # # ## #  # # # # # # # //
 
 /* What program is execed by st depends of these precedence rules:
  * 1: program passed with -e
@@ -131,7 +104,7 @@ char *termname = "st-256color";
 /* #unsigned int defaultfg = 7; */
 /* #unsigned int defaultbg = 0; */
 /* #static unsigned int defaultcs = 256; */
-static unsigned int defaultrcs = 257;
+//static unsigned int defaultrcs = 257;
 
 /*
  * Default shape of cursor
