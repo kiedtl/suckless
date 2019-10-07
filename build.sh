@@ -5,9 +5,9 @@
 export CFLAGS='-O3 -pipe -s -pedantic -std=c99 \
 -fstack-protector-strong -fstack-clash-protection -fexceptions'
 export LDFLAGS=-s
-export PREFIX="${HOME}"/usr/local
+export PREFIX=/usr
 
-[ "$1" ] || set -- dmenu sent st surf tabbed
+[ "$1" ] || set -- dwm st surf tabbed
 
 START_PWD="$PWD"
 for name in $@ ; do
@@ -30,12 +30,8 @@ for name in $@ ; do
     cp -f config/config.mk $name/config.mk 2>/dev/null ||:
     cd $name
     make clean
-
-    # surf refuses to start with tcc, looking into it
-    [ $name = surf ] && export CC=gcc
-
-    make CC=$CC
-    make PREFIX="$PREFIX" install
+    
+    sudo make PREFIX="$PREFIX" install
     make clean
     cd "$START_PWD"
 done

@@ -2,7 +2,7 @@ static unsigned int gappx = 12;
 static const unsigned int borderpx  = 4;
 static const int showbar            = 1;
 static const int topbar             = 1;
-static const int bh = 16; // bar height
+static const int bh = 29; // bar height
 static const int focusonwheel = 1;
 
 //static const char *colors[][3]      = {

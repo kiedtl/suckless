@@ -1,4 +1,4 @@
-#define HOMEPAGE "file:///home/mitch/src/startpage/index.html"
+#define HOMEPAGE "file:///home/kiedtl/.surf/startpage/min.html"
 const static SearchEngine searchengines[] = {
     { "",       "https://duckduckgo.com/?q=%s" },
     { "g",      "https://google.com/search?q=%s"   },

@@ -1,6 +1,6 @@
 VERSION = 1.4
 
-PREFIX = /home/mitch/usr/local
+PREFIX = /home/kiedtl/usr/local
 MANPREFIX = ${PREFIX}/share/man
 
 X11INC = /usr/X11R6/include

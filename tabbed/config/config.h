@@ -11,7 +11,7 @@ static const int HEIGHT=300;
 static const int barheight = -1; 
 
 // pywal theme
-#include "/home/mitch/.cache/wal/colors-wal-tabbed.h"
+#include "/home/kiedtl/.cache/wal/colors-wal-tabbed.h"
 
 static const char before[]      = "<";
 static const char after[]       = ">";
@@ -61,7 +61,7 @@ static const Key keys[] = {
     { ControlMask,               XK_w,      killclient,  { 0 } },
 
     /* this opens dmenu to rifle through tabs */
-    /* { ControlMask,               XK_t,      spawn,       SETPROP("_TABBED_SELECT_TAB") }, */
+    { ControlMask,               XK_t,      spawn,       SETPROP("_TABBED_SELECT_TAB") },
 
     { ControlMask,               XK_1,      move,        { .i = 0 } },
     { ControlMask,               XK_2,      move,        { .i = 1 } },
