@@ -1,17 +1,9 @@
 /* --------------- Fonts -------------------------------- */
-/* char font[] = "Terminus:pixelsize=14:antialias=false:autohint=false"; */
-/* char font[] = "Terminus:pixelsize=12:antialias=false:autohint=false"; */
-/* char font[] = "Terminus:pixelsize=14:antialias=false:autohint=false"; */
-/* char font[] = "Share Tech Mono:pixelsize=16:antialias=true:autohint=true"; */
-/* char font[] = "IBMPlexMono:pixelsize=16:antialias=true:autohint=true"; */
-/* char font[] = "GohuFont:pixelsize=14:antialias=false:autohint=false"; */
-/* char font[] = "cherry:pixelsize=12:antialias=false:autohint=false"; */
-char font[] = "Iosevka:pixelsize=14:antialias=true:autohint=true";
-/* char font[] = "MonteCarlo:pixelsize=10:antialias=false:autohint=false"; */
+char font[] = "Hack:pixelsize=14:antialias=true:autohint=true";
 /* ------------------------------------------------------- */
 
 float alpha = 1.0; /* bg opacity */
-int borderpx = 24; /* Internal border / padding */
+int borderpx = 54; /* Internal border / padding */
 static unsigned int cols = 80; /* Default columns */
 static unsigned int rows = 30; /* Default rows */
 unsigned int tabspaces = 4;
