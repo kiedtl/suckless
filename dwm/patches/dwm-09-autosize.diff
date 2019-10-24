@@ -4,10 +4,10 @@ Date:   Thu Dec 22 17:31:07 2016 +0100
 
     Applied and fixed autostart patch for previous version;
 
-diff --git a/dwm.c b/dwm.c
+diff --git dwm/dwm.c dwm/dwm.c
 index d27cb67..066ed71 100644
---- a/dwm.c
-+++ b/dwm.c
+--- dwm/dwm.c
++++ dwm/dwm.c
 @@ -194,6 +194,7 @@ static void resizeclient(Client *c, int x, int y, int w, int h);
  static void resizemouse(const Arg *arg);
  static void restack(Monitor *m);

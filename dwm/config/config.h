@@ -1,4 +1,4 @@
-static unsigned int gappx = 12;
+static unsigned int gappx = 29;
 static const unsigned int borderpx  = 4;
 static const int showbar            = 1;
 static const int topbar             = 1;
@@ -37,8 +37,8 @@ static const char *colors[][3]      = {
 };
 
 
-static const int NUM_WORKSPACES=13;
-static const char *tags[] = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" };
+static const int NUM_WORKSPACES=9;
+static const char *tags[] = { "0", "1", "2", "3", "4", "5", "6", "7", "8" };
 
 static const Rule rules[] = {
     /* class      instance    title                 tags mask  iscentered   isfloating   monitor */
