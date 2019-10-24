@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
 #type tcc >/dev/null && CC=tcc
 #export CC=${CC:-gcc}
@@ -33,5 +33,6 @@ for name in $@ ; do
     
     sudo make PREFIX="$PREFIX" install
     make clean
+    tar cvf "./$name.tar" "/home/kiedtl/repos/suckless/$name/$name" 
     cd "$START_PWD"
 done
