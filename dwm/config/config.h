@@ -77,7 +77,12 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", "xos4 Terminus:size=11", "-nb", col_norm_bg, "-nf", col_norm_fg, "-sb", col_sel_bg, "-sf", col_sel_fg, NULL };
+
+// old dmenu
+// static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", "xos4 Terminus:size=11", "-nb", col_norm_bg, "-nf", col_norm_fg, "-sb", col_sel_bg, "-sf", col_sel_fg, NULL };
+
+// new dmenu
+static const char *dmenucmd[] = { "ndmen", NULL};
 static const char *termcmd[]  = { "xterm", NULL};
 static const char *lockcmd[]  = { "slock", NULL};
 static const char scratchpadname[] = "scratchpad";
