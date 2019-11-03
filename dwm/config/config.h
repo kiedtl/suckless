@@ -1,8 +1,8 @@
-static unsigned int gappx = 41;
-static const unsigned int borderpx  = 0;
+static unsigned int gappx = 12;
+static const unsigned int borderpx  = 4;
 static const int showbar            = 1;
 static const int topbar             = 1;
-static const int bh = 0; // bar height
+static const int bh = 29; // bar height
 static const int focusonwheel = 1;
 
 //static const char *colors[][3]      = {
@@ -78,14 +78,16 @@ static const Layout layouts[] = {
 
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", "xos4 Terminus:size=11", "-nb", col_norm_bg, "-nf", col_norm_fg, "-sb", col_sel_bg, "-sf", col_sel_fg, NULL };
-static const char *termcmd[]  = { "urxvt", NULL};
+static const char *termcmd[]  = { "xterm", NULL};
+static const char *lockcmd[]  = { "slock", NULL};
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "urxvt", "-tn", scratchpadname, "-geometry", "84x24", NULL };
+static const char *scratchpadcmd[] = { "xterm", "-title", scratchpadname, "-geometry", "84x24", NULL };
  
 static Key keys[] = {
     /* modifier                     key        function        argument */
     { MODKEY,                       XK_d,      spawn,          {.v = dmenucmd }  },
     { MODKEY,                       XK_Return, spawn,          {.v = termcmd }  },
+    { MODKEY|ShiftMask,             XK_s,      spawn,          {.v = lockcmd }  },
     { MODKEY|ShiftMask,             XK_q,      killclient,     {0} },
     { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
     { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
