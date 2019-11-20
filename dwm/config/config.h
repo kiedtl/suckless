@@ -71,10 +71,10 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 
 // new dmenu
 static const char *dmenucmd[] = { "ndmen", NULL};
-static const char *termcmd[]  = { "tabbed", "xterm", "-into", NULL};
+static const char *termcmd[]  = { "tabbed", "st", "-e", NULL};
 static const char *lockcmd[]  = { "slock", NULL};
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "xterm", "-title", scratchpadname, "-geometry", "84x24", NULL };
+static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "84x24", NULL };
  
 static Key keys[] = {
     /* modifier                     key        function        argument */
@@ -86,8 +86,8 @@ static Key keys[] = {
     { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
     { MODKEY|ShiftMask,             XK_h,      setmfact,       {.f = -0.05} },
     { MODKEY|ShiftMask,             XK_l,      setmfact,       {.f = +0.05} },
-    { MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-    { MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
+    { MODKEY,                       XK_t,      setlayout,      {.v = &layouts[1]} },
+    { MODKEY,                       XK_f,      setlayout,      {.v = &layouts[0]} },
     { MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
     { MODKEY,                       XK_space,  togglescratch,  {.v = scratchpadcmd } },
     { MODKEY,                       XK_s,      togglesticky,   {0} },
@@ -104,5 +104,5 @@ static Key keys[] = {
 static Button buttons[] = {
     { ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
     { ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
-    { ClkRootWin,           0,              Button3,        spawn,          SHCMD("rcmen") },
+    { ClkRootWin,           0,              Button3,        spawn,          SHCMD("/home/kiedtl/bin/rcmen") },
 };
