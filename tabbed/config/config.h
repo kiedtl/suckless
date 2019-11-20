@@ -1,14 +1,14 @@
 /* static const char font[]        = "Terminus:pixelsize=16:antialias=false:autohint=false"; */
 /* static const char font[]        = "Share Tech Mono:pixelsize=16:antialias=true:autohint=true"; */
 /* static const char font[]        = "IBMPlexMono:pixelsize=16:antialias=true:autohint=true"; */
-static const char font[]        = "IBMPlexMono:pixelsize=12:antialias=true:autohint=true";
+static const char font[]        = "Terminus:pixelsize=14";
 
 static const int WIDTH=400;
 static const int HEIGHT=300;
 
 /* set to -1 if you want to use the text's height */
 /* static const int barheight = 24; */ 
-static const int barheight = -1; 
+static const int barheight = 100; 
 
 // pywal theme
 #include "/home/kiedtl/.cache/wal/colors-wal-tabbed.h"

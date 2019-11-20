@@ -1,3 +1,5 @@
+#include "/home/kiedtl/.cache/wal/colors-wal-dwm.h"
+
 static unsigned int gappx = 12;
 static const unsigned int borderpx  = 4;
 static const int showbar            = 1;
@@ -13,7 +15,7 @@ static const int focusonwheel = 1;
 //};
 
 /* my colors */
-static const char col_norm_fg[]     = "#cacbca";
+/*static const char col_norm_fg[]     = "#cacbca";
 static const char col_norm_bg[]     = "#030f11";
 static const char col_sel_fg[]      = "#cacbca";
 
@@ -29,34 +31,20 @@ static const char sel_fg[] = "#cacbca";
 static const char sel_bg[] = "#4B5451";
 static const char sel_border[] = "#cacbca";
 
-/* end my colors */
+* end my colors *
 static const char *colors[][3]      = {
 	[SchemeNorm] = { col_norm_fg, col_norm_bg, col_norm_bdr },
 	[SchemeSel]  = { col_sel_fg, col_sel_bg,  col_sel_bdr },
 	[SchemeUrg]  = { col_sel_fg, col_sel_bg,  col_sel_bdr },
 };
-
+*/
 
 static const int NUM_WORKSPACES=9;
 static const char *tags[] = { "0", "1", "2", "3", "4", "5", "6", "7", "8" };
 
 static const Rule rules[] = {
     /* class      instance    title                 tags mask  iscentered   isfloating   monitor */
-    { "Gimp",     NULL,       "Gimp",                 0,         0,           1,           -1 },
-    { "Image Manipulation Program", NULL, "Image Manipulation Program",  0, 0, 1, -1 },
-    { "GNU Image Manipulation Program", NULL, "GNU Image Manipulation Program", 0, 0, 1, -1 },
-    { "st",              NULL,       "surf-download",     0,         1,           1,           -1 },
-    { "surf-download",   NULL,       "surf-download",     0,         1,           1,           -1 },
-    { "floating-st",     NULL,       "floating-st",       0,         1,           1,           -1 },
-    { "tabbed",          NULL,       "floating-st",       0,         1,           1,           -1 },
-    { "st",              NULL,       "floating-st",       0,         1,           1,           -1 },
-    { "st",              NULL,       "x9term",            0,         1,           1,           -1 },
-    { "0",               NULL,       "x9term",            0,         1,           1,           -1 },
-    { "NULL",            NULL,       "x9term",            0,         1,           1,           -1 },
     { "feh",             NULL,       "feh",               0,         1,           1,           -1 },
-    { "meh",             NULL,       "meh",               0,         1,           1,           -1 },
-    { "mpv",             NULL,       "mpv",               0,         1,           1,           -1 },
-    { "x9term",          NULL,       "x9term",            0,         0,           1,           -1 },
 };
 
 static const float mfact     = 0.5;
@@ -66,8 +54,8 @@ static const int resizehints = 1;
 static const int NUM_LAYOUTS = 3;
 static const Layout layouts[] = {
     /* symbol     arrange function */
+    { "F",      NULL },    /* NULL arrange function = floating */
     { "T",      tile },    /* first entry is default */
-    { "F",      NULL },    /* no layout function means floating behavior */
     { "M",      monocle },
 };
 
@@ -83,7 +71,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 
 // new dmenu
 static const char *dmenucmd[] = { "ndmen", NULL};
-static const char *termcmd[]  = { "xterm", NULL};
+static const char *termcmd[]  = { "tabbed", "xterm", "-into", NULL};
 static const char *lockcmd[]  = { "slock", NULL};
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "xterm", "-title", scratchpadname, "-geometry", "84x24", NULL };

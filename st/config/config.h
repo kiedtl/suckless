@@ -1,4 +1,4 @@
-/* --------------- Fonts -------------------------------- */
+/*--------------- Fonts -------------------------------- */
 char font[] = "Hack:pixelsize=14:antialias=true:autohint=true";
 /* ------------------------------------------------------- */
 
@@ -8,8 +8,8 @@ static unsigned int cols = 80; /* Default columns */
 static unsigned int rows = 30; /* Default rows */
 unsigned int tabspaces = 4;
 
-#include "/home/kiedtl/.cache/wal/colors-wal-st.h"
-/* #include "../themes/mine/plan9.h" */
+// #include "/home/kiedtl/.cache/wal/colors-wal-st.h"
+#include "../themes/mine/plan9.h"
 
 MouseShortcut mshortcuts[] = {
     /* button               mask            string */
