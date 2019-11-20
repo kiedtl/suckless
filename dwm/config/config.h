@@ -104,5 +104,5 @@ static Key keys[] = {
 static Button buttons[] = {
     { ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
     { ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
-    { ClkRootWin,           0,              Button3,        spawn,          SHCMD("x9term") },
+    { ClkRootWin,           0,              Button3,        spawn,          SHCMD("rcmen") },
 };
