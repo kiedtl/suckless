@@ -1,14 +1,8 @@
 // http://github.com/mitchweaver/suckless
 --- dwm/dwm.c
 +++ dwm/dwm.c
-@@ -55,7 +55,6 @@
- #define WIDTH(X)                ((X)->w + 2 * (X)->bw)
- #define HEIGHT(X)               ((X)->h + 2 * (X)->bw)
- #define TAGMASK                 ((1 << LENGTH(tags)) - 1)
+@@ -55,1 +55,0 @@
 -#define TEXTW(X)                (drw_fontset_getwidth(drw, (X)) + lrpad)
- 
- /* enums */
- enum { CurNormal, CurResize, CurMove, CurLast }; /* cursor */
 @@ -238,8 +237,6 @@
  static char stext[256];
  static int screen;
