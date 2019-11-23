@@ -71,10 +71,10 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 
 // new dmenu
 static const char *dmenucmd[] = { "ndmen", NULL};
-static const char *termcmd[]  = { "st", "-t", "terminal", NULL};
+static const char *termcmd[]  = { "xterm", "-title", "terminal", NULL};
 static const char *lockcmd[]  = { "slock", NULL};
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "84x24", NULL };
+static const char *scratchpadcmd[] = { "xterm", "-title", scratchpadname, "-geometry", "84x24", NULL };
  
 static Key keys[] = {
     /* modifier                     key        function        argument */
