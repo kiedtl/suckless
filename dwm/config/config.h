@@ -1,7 +1,7 @@
 #include "/home/kiedtl/.cache/wal/colors-wal-dwm.h"
 
 static unsigned int gappx = 12;
-static const unsigned int borderpx  = 4;
+static const unsigned int borderpx  = 2;
 static const int showbar            = 1;
 static const int topbar             = 1;
 static const int bh = 29; // bar height
@@ -78,7 +78,7 @@ static const char *scratchpadcmd[] = { "xterm", "-title", scratchpadname, "-geom
  
 static Key keys[] = {
     /* modifier                     key        function        argument */
-    { MODKEY,                       XK_d,      spawn,          {.v = dmenucmd }  },
+    { MODKEY,                       XK_p,      spawn,          {.v = dmenucmd }  },
     { MODKEY,                       XK_Return, spawn,          {.v = termcmd }  },
     { MODKEY|ShiftMask,             XK_s,      spawn,          {.v = lockcmd }  },
     { MODKEY|ShiftMask,             XK_q,      killclient,     {0} },
