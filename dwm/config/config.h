@@ -7,8 +7,8 @@ static const int focusonwheel = 1;
 
 static const char *colors[][3]      = {
     /*               fg         bg         border   */
-    [SchemeNorm] = { "#c3d3d2", "#080807", "#9a4f31" }, // unfocused windows
-    [SchemeSel]  = { "#c3d3d2", "#685445", "#a3d3d2" }, // focused window
+    [SchemeNorm] = { "#c3d3d2", "#080807", "#0c0f15" }, // unfocused windows
+    [SchemeSel]  = { "#c3d3d2", "#685445", "#cfd3d9" }, // focused window
     [SchemeUrg]  = { "#c3d3d2", "#2d4e42", "#2d4e42" },
 };
 
