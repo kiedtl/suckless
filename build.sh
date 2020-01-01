@@ -30,9 +30,8 @@ for name in $@ ; do
     cp -f config/config.mk $name/config.mk 2>/dev/null ||:
     cd $name
     make clean
-    
+
     sudo make PREFIX="$PREFIX" install
     make clean
-    tar cvf "./$name.tar" "/home/kiedtl/repos/suckless/$name/$name" 
     cd "$START_PWD"
 done

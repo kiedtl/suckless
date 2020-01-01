@@ -3,7 +3,7 @@ static const char *user  = "kiedtl";
 static const char *group = "kiedtl";
 
 static const char *colorname[NUMCOLS] = {
-	[INIT] =   "#cfd3d9",   /* after initialization */
+	[INIT] =   "#0f0d12",   /* after initialization */
 	[INPUT] =  "#0A96FF",   /* during input */
 	[FAILED] = "#FF0A0A",   /* wrong password */
 };
