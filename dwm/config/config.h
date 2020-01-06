@@ -1,19 +1,19 @@
-static unsigned int gappx = 12;
+static unsigned int gappx = 16;
 static const unsigned int borderpx  = 2;
 static const int showbar            = 1;
 static const int topbar             = 1;
-static const int bh = 29; // bar height
+static const int bh = 25; // bar height
 static const int focusonwheel = 1;
 
 static const char *colors[][3]      = {
     /*               fg         bg         border   */
-    [SchemeNorm] = { "#c3d3d2", "#080807", "#0f0d12" }, // unfocused windows
-    [SchemeSel]  = { "#c3d3d2", "#685445", "#dfdacb" }, // focused window
+    [SchemeNorm] = { "#c3d3d2", "#080807", "#0e120d" }, // unfocused windows
+    [SchemeSel]  = { "#c3d3d2", "#685445", "#e1e2e2" }, // focused window
     [SchemeUrg]  = { "#c3d3d2", "#2d4e42", "#2d4e42" },
 };
 
 static const int NUM_WORKSPACES=9;
-static const char *tags[] = { "0", "1", "2", "3", "4", "5", "6", "7", "8" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
     /* class      instance    title                 tags mask  iscentered   isfloating   monitor */
@@ -28,9 +28,9 @@ static const int resizehints = 1;
 static const int NUM_LAYOUTS = 3;
 static const Layout layouts[] = {
     /* symbol     arrange function */
-    { "F",      NULL },    /* NULL arrange function = floating */
-    { "T",      tile },    /* first entry is default */
-    { "M",      monocle },
+    { "[]=",      tile },    /* first entry is default */
+    { "><>",      NULL },    /* NULL arrange function = floating */
+    { "[M]",      monocle },
 };
 
 #define MODKEY Mod4Mask
@@ -55,8 +55,8 @@ static Key keys[] = {
     { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
     { MODKEY|ShiftMask,             XK_h,      setmfact,       {.f = -0.05} },
     { MODKEY|ShiftMask,             XK_l,      setmfact,       {.f = +0.05} },
-    { MODKEY,                       XK_t,      setlayout,      {.v = &layouts[1]} },
-    { MODKEY,                       XK_f,      setlayout,      {.v = &layouts[0]} },
+    { MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
+    { MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
     { MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
     { MODKEY,                       XK_space,  togglescratch,  {.v = scratchpadcmd } },
     { MODKEY,                       XK_s,      togglesticky,   {0} },
@@ -73,5 +73,5 @@ static Key keys[] = {
 static Button buttons[] = {
     { ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
     { ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
-    { ClkRootWin,           0,              Button3,        spawn,          SHCMD("/home/kiedtl/bin/rcmen") },
+    //{ ClkRootWin,           0,              Button3,        spawn,          SHCMD("/home/kiedtl/bin/rcmen") },
 };
