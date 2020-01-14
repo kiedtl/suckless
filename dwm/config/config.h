@@ -11,7 +11,7 @@ static       unsigned int gappx        = 16;
 static const unsigned int borderpx     = 2;
 static const int          showbar      = 1;
 static const int          topbar       = 1;
-static       int          bh           = 25; // bar height
+static       int          bh           = 26; // bar height
 static const int          horizpadbar  = 2;
 static const int          vertpadbar   = 0;
 static const char         *fonts[]     = { "ttyp0:size=15" };
@@ -26,7 +26,7 @@ static const char *colors[][3]      = {
     [SchemeUrg]  = { foreground, background, "#2d4e42"  },
 };
 
-static const int NUM_WORKSPACES=9;
+static const int NUM_WORKSPACES = 9;
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
@@ -74,6 +74,8 @@ static Key keys[] = {
     { MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
     { MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
     { MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
+    { MODKEY,                       XK_d,      setlayout,      {.v = &layouts[4]} },
+    { MODKEY|ShiftMask,             XK_d,      setlayout,      {.v = &layouts[3]} },
     { MODKEY,                       XK_space,  togglescratch,  {.v = scratchpadcmd } },
     { MODKEY,                       XK_s,      togglesticky,   {0} },
     { MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
