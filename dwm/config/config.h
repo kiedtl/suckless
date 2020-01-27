@@ -9,7 +9,7 @@
 
 static       unsigned int gappx        = 16;
 static const unsigned int borderpx     = 2;
-static const int          showbar      = 0;
+static const int          showbar      = 1;
 static const int          topbar       = 1;
 static       int          bh           = 26; // bar height
 static const int          horizpadbar  = 2;
