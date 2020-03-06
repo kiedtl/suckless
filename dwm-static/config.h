@@ -7,17 +7,17 @@
 
 #include "fibonacci.c"
 
-static       unsigned int gappx        = 16;
+static       unsigned int gappx        = 24;
 static const unsigned int borderpx     = 2;
 static const int          showbar      = 1;
 static const int          topbar       = 0;
-static       int          bh           = 48; // bar height
+static       int          bh           = 32; // bar height
 static const int          horizpadbar  = 2;
 static const int          vertpadbar   = 0;
-static const char         *fonts[]     = { "ttyp0:size=15" };
+static const char         *fonts[]     = { "cozette" };
 
-static const char         background[] = "#0e120d";
-static const char         foreground[] = "#e1e2e2";
+static const char         background[] = "#0d1820";
+static const char         foreground[] = "#d3dadb";
 
 static const char *colors[][3]      = {
     /*               fg          bg          border   */
