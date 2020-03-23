@@ -3,9 +3,10 @@
 #type tcc >/dev/null && CC=tcc
 #export CC=${CC:-gcc}
 export CFLAGS='-O3 -pipe -s -pedantic -std=c99 \
--fstack-protector-strong -fstack-clash-protection -fexceptions'
+-fstack-protector-strong -fstack-clash-protection -fexceptions \
+-march=native'
 export LDFLAGS=-s
-export PREFIX=/usr
+export PREFIX=/usr/local
 
 [ "$1" ] || set -- dwm st surf tabbed
 

@@ -8,9 +8,9 @@
 #include "fibonacci.c"
 
 static       unsigned int gappx        = 24;
-static const unsigned int borderpx     = 2;
+static const unsigned int borderpx     = 0;
 static const int          showbar      = 1;
-static const int          topbar       = 0;
+static const int          topbar       = 1;
 static       int          bh           = 32; // bar height
 static const int          horizpadbar  = 2;
 static const int          vertpadbar   = 0;
@@ -26,8 +26,8 @@ static const char *colors[][3]      = {
     [SchemeUrg]  = { foreground, background, "#2d4e42"  },
 };
 
-static const int NUM_WORKSPACES = 9;
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const int NUM_WORKSPACES = 8;
+static const char *tags[] = { "000", "001", "010", "011", "100", "101", "110", "111" };
 
 static const Rule rules[] = {
     /* class      instance    title                 tags mask  iscentered   isfloating   monitor */
@@ -79,7 +79,7 @@ static Key keys[] = {
     { MODKEY,                       XK_l,      rotatestack,    {.i = +1 } },
     { MODKEY,                       XK_Tab,    view,           {0} },
     TAGKEYS(XK_1,0) TAGKEYS(XK_2,1) TAGKEYS(XK_3,2) TAGKEYS(XK_4,3) TAGKEYS(XK_5,4)
-    TAGKEYS(XK_6,5) TAGKEYS(XK_7,6) TAGKEYS(XK_8,7) TAGKEYS(XK_9,8) TAGKEYS(XK_0,9)
+    TAGKEYS(XK_6,5) TAGKEYS(XK_7,6) TAGKEYS(XK_8,7) TAGKEYS(XK_9,8)
     TAGKEYS(XK_parenleft,10) TAGKEYS(XK_parenright,11) TAGKEYS(XK_BackSpace,12)
     { MODKEY|ShiftMask,             XK_e,      quit,           {0} },
 };

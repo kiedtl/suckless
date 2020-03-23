@@ -1,14 +1,14 @@
 /* static const char font[]        = "Terminus:pixelsize=16:antialias=false:autohint=false"; */
 /* static const char font[]        = "Share Tech Mono:pixelsize=16:antialias=true:autohint=true"; */
 /* static const char font[]        = "IBMPlexMono:pixelsize=16:antialias=true:autohint=true"; */
-static const char font[]        = "Terminus:pixelsize=14";
+static const char font[]        = "cozette:pixelsize=14";
 
 static const int WIDTH=400;
 static const int HEIGHT=300;
 
 /* set to -1 if you want to use the text's height */
 /* static const int barheight = 24; */ 
-static const int barheight = 100; 
+static const int barheight = 48;
 
 // pywal theme
 #include "/home/kiedtl/.cache/wal/colors-wal-tabbed.h"
@@ -44,25 +44,24 @@ static Bool npisrelative  = True;
 
 static const Key keys[] = {
     /* modifier             key        function     argument */
-    { ControlMask,     XK_n, focusonce,   { 0 } },
-    { ControlMask,     XK_n, spawn,       { 0 } },
+    { ControlMask,     XK_t, focusonce,   { 0 } },
+    { ControlMask,     XK_t, spawn,       { 0 } },
 
      /* ------ shifts to next tab ------ */
-    { ControlMask|ShiftMask,     XK_k,      rotate,      { .i = +1 } },
-    { ControlMask|ShiftMask,     XK_j,      rotate,      { .i = -1 } },
+    { ControlMask,     XK_k,      rotate,      { .i = +1 } },
+    { ControlMask,     XK_j,      rotate,      { .i = -1 } },
 
     { ControlMask,               XK_Tab,    rotate,      { .i = +1 } },
     { ControlMask|ShiftMask,     XK_Tab,    rotate,      { .i = -1 } },
     { ShiftMask,                 XK_Tab,    rotate,      { .i = 0 } }, // back-&-forth
 
     /* ------- moves a tab left or right in stack ---- */
-    { ControlMask|ShiftMask,     XK_h,      movetab,     { .i = -1 } },
-    { ControlMask|ShiftMask,     XK_l,      movetab,     { .i = +1 } },
-    { ControlMask,               XK_w,      killclient,  { 0 } },
+    { ControlMask,     XK_h,      movetab,     { .i = -1 } },
+    { ControlMask,     XK_l,      movetab,     { .i = +1 } },
+    { ControlMask,     XK_w,      killclient,  { 0 } },
 
     /* this opens dmenu to rifle through tabs */
-    { ControlMask,               XK_t,      spawn,       SETPROP("_TABBED_SELECT_TAB") },
-
+    { ControlMask,     XK_p,      spawn,       SETPROP("_TABBED_SELECT_TAB") },
     { ControlMask,               XK_1,      move,        { .i = 0 } },
     { ControlMask,               XK_2,      move,        { .i = 1 } },
     { ControlMask,               XK_3,      move,        { .i = 2 } },
