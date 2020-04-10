@@ -7,8 +7,8 @@
 
 #include "fibonacci.c"
 
-static       unsigned int gappx        = 24;
-static const unsigned int borderpx     = 0;
+static       unsigned int gappx        = 8;
+static const unsigned int borderpx     = 2;
 static const int          showbar      = 1;
 static const int          topbar       = 1;
 static       int          bh           = 32; // bar height
@@ -16,15 +16,19 @@ static const int          horizpadbar  = 2;
 static const int          vertpadbar   = 0;
 static const char         *fonts[]     = { "cozette" };
 
+#include "/home/kiedtl/.cache/wal/colors-wal-dwm.h"
+
+/*
 static const char         background[] = "#0d1820";
 static const char         foreground[] = "#d3dadb";
 
 static const char *colors[][3]      = {
-    /*               fg          bg          border   */
-    [SchemeNorm] = { foreground, background, background }, /* no border for unfocused windows */
-    [SchemeSel]  = { foreground, background, foreground }, /* focused window */
+    *               fg          bg          border   *
+    [SchemeNorm] = { foreground, background, background }, * no border for unfocused windows *
+    [SchemeSel]  = { foreground, background, foreground }, * focused window *
     [SchemeUrg]  = { foreground, background, "#2d4e42"  },
 };
+*/
 
 static const int NUM_WORKSPACES = 8;
 static const char *tags[] = { "000", "001", "010", "011", "100", "101", "110", "111" };
