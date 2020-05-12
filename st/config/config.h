@@ -9,9 +9,9 @@ static unsigned int cols = 84;
 static unsigned int rows = 24;
 const int borderpx = 24;
 
-unsigned int tabspaces = 4;
-static unsigned int xfps = 120;
-static unsigned int actionfps = 30;
+unsigned int tabspaces = 8;
+static unsigned int xfps = 200;
+static unsigned int actionfps = 50;
 
 /* -*-*-*-*-*-*-*- Themes *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* */
 // pywal:

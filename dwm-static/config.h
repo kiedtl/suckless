@@ -7,11 +7,11 @@
 
 #include "fibonacci.c"
 
-static       unsigned int gappx        = 8;
-static const unsigned int borderpx     = 2;
+static       unsigned int gappx        = 16;
+static const unsigned int borderpx     = 6;
 static const int          showbar      = 1;
 static const int          topbar       = 1;
-static       int          bh           = 32; // bar height
+static       int          bh           = 24; // bar height
 static const int          horizpadbar  = 2;
 static const int          vertpadbar   = 0;
 static const char         *fonts[]     = { "cozette" };
@@ -64,7 +64,7 @@ static const char *scratchpadcmd[] = { "xterm", "-title", scratchpadname, "-geom
 static Key keys[] = {
     /* modifier                     key        function        argument */
     { MODKEY,                       XK_p,      spawn,          SHCMD("ndmen") },
-    { MODKEY,                       XK_Return, spawn,          SHCMD("xterm") },
+    { MODKEY,                       XK_Return, spawn,          SHCMD("term") },
     { MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("slock") },
     { MODKEY|ShiftMask,             XK_q,      killclient,     {0} },
     { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
