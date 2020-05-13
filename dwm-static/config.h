@@ -11,24 +11,23 @@ static       unsigned int gappx        = 16;
 static const unsigned int borderpx     = 6;
 static const int          showbar      = 1;
 static const int          topbar       = 1;
-static       int          bh           = 24; // bar height
+static       int          bh           = 46; // bar height
 static const int          horizpadbar  = 2;
 static const int          vertpadbar   = 0;
 static const char         *fonts[]     = { "cozette" };
 
-#include "/home/kiedtl/.cache/wal/colors-wal-dwm.h"
-
-/*
-static const char         background[] = "#0d1820";
-static const char         foreground[] = "#d3dadb";
-
-static const char *colors[][3]      = {
-    *               fg          bg          border   *
-    [SchemeNorm] = { foreground, background, background }, * no border for unfocused windows *
-    [SchemeSel]  = { foreground, background, foreground }, * focused window *
-    [SchemeUrg]  = { foreground, background, "#2d4e42"  },
+static char normbgcolor[]              = "#222222";
+static char normbordercolor[]          = "#444444";
+static char normfgcolor[]              = "#bbbbbb";
+static char selfgcolor[]               = "#eeeeee";
+static char selbordercolor[]           = "#005577";
+static char selbgcolor[]               = "#005577";
+static char *colors[][3] = {
+	/*               fg           bg           border   */
+	[SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
+	[SchemeSel]  = { selfgcolor,  selbgcolor,  selbordercolor  },
 };
-*/
+
 
 static const int NUM_WORKSPACES = 8;
 static const char *tags[] = { "000", "001", "010", "011", "100", "101", "110", "111" };
@@ -85,6 +84,7 @@ static Key keys[] = {
     TAGKEYS(XK_1,0) TAGKEYS(XK_2,1) TAGKEYS(XK_3,2) TAGKEYS(XK_4,3) TAGKEYS(XK_5,4)
     TAGKEYS(XK_6,5) TAGKEYS(XK_7,6) TAGKEYS(XK_8,7) TAGKEYS(XK_9,8)
     TAGKEYS(XK_parenleft,10) TAGKEYS(XK_parenright,11) TAGKEYS(XK_BackSpace,12)
+    { MODKEY,                       XK_r,      xrdb,           {.v = NULL } },
     { MODKEY|ShiftMask,             XK_e,      quit,           {0} },
 };
 
