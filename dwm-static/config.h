@@ -45,8 +45,8 @@ static const int   resizehints = 1;   /* 1 = respect size hints in tiles resizal
 static const int NUM_LAYOUTS = 3;
 static const Layout layouts[] = {
     /* symbol     arrange function */
-    { "[]=",      tile },    /* first entry is default */
     { "><>",      NULL },    /* NULL arrange function = floating */
+    { "[]=",      tile },    /* first entry is default */
     { "[M]",      monocle },
     { "(@)",      spiral },
     { "[\\]",     dwindle },
